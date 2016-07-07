@@ -1,0 +1,30 @@
+/*
+ Localizable.strings
+ 
+ Created by Dyfei on 15/6/17.
+ Copyright (c) 2015年 UQ Interactive. All rights reserved.
+ */
+
+"Lan_description" = "韩文";
+
+/******************************** 网络部分 ***********************************/
+
+//网络请求超时
+"Lan_network_timeout" = "접속이 불안정합니다. 다시 접속해 주세요!";
+//网络断开
+"Lan_network_disconnect" = "접속이 불안정합니다. 다시 접속해 주세요!";
+//接收语言的头信息
+"Lan_network_accept_lang" = "ko";
+
+/******************************** alert提示语 ********************************/
+
+//alert提示标题
+"Lan_alert_title" = "메세지";
+//alert按钮标题
+"Lan_alert_button_title" = "확인";
+//获取订单失败
+"Lan_alert_get_transId_failed" = "시스템 오류";
+//上报凭证失败时提示用户
+"Lan_alert_report_receipt_failed" = "결재실패. 다시 시도 해 주세요.";
+
+/*********************************** END ***********************************/

@@ -1,0 +1,30 @@
+/*
+ Localizable.strings
+ 
+ Created by Dyfei on 15/6/17.
+ Copyright (c) 2015年 UQ Interactive. All rights reserved.
+ */
+
+"Lan_description" = "英文";
+
+/******************************** 网络部分 ***********************************/
+
+//网络请求超时
+"Lan_network_timeout" = "Internet connection timeout. Connect to Internet and try again!";
+//网络断开
+"Lan_network_disconnect" = "No Internet connection available. Connect to Internet and try it again!";
+//接收语言的头信息
+"Lan_network_accept_lang" = "en";
+
+/******************************** alert提示语 ********************************/
+
+//alert提示标题
+"Lan_alert_title" = "Notification";
+//alert按钮标题
+"Lan_alert_button_title" = "OK";
+//获取订单失败
+"Lan_alert_get_transId_failed" = "Failed to submit order";
+//上报凭证失败时提示用户
+"Lan_alert_report_receipt_failed" = "Error. Please restart the game and try it again";
+
+/*********************************** END ***********************************/
