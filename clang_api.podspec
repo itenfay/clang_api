@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "clang_api"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "Using the C method to call the Objective-C interface, convenient and easy to use it."
   s.homepage     = "https://github.com/Daford/clang_api"
   s.license      = { :type => "MIT", :file => "LICENSE" }
