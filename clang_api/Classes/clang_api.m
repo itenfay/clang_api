@@ -1,8 +1,8 @@
 //
 //  clang_api.m
 //
-//  Created by Daford on 15/8/14.
-//  Copyright (c) 2015 Daford.
+//  Created by Eastze on 15/8/14.
+//  Copyright (c) 2015 Eastze.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -32,52 +32,43 @@ void clang_delay_perform_selector_v2(id target, SEL sel, id obj, double ti);
 #define BUNDLE_EXTENSION @"bundle"
 #define LANGKIT_TYPE @"lproj"
 
-NSBundle *clang_bundle(NSString *bundleName)
-{
+NSBundle *clang_bundle(NSString *bundleName) {
 	NSString *path = [[NSBundle mainBundle] pathForResource:bundleName ofType:BUNDLE_EXTENSION];
 	return [NSBundle bundleWithPath:path];
 }
 
-BOOL clang_equal(id obj1, id obj2)
-{
+BOOL clang_equal(id obj1, id obj2) {
 	return [obj1 isEqual:obj2];
 }
 
-BOOL clang_equal_to_string(NSString *str1, NSString *str2)
-{
+BOOL clang_equal_to_string(NSString *str1, NSString *str2) {
 	return [str1 isEqualToString:str2];
 }
 
-void clang_perform_selector(id target, SEL sel)
-{
+void clang_perform_selector(id target, SEL sel) {
 	clang_perform_selector_v2(target, sel, nil);
 }
 
-void clang_perform_selector_v2(id target, SEL sel, id obj)
-{
+void clang_perform_selector_v2(id target, SEL sel, id obj) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 	[target performSelector:sel withObject:obj];
 #pragma clang diagnostic pop
 }
 
-void clang_delay_perform_selector(id target, SEL sel, double ti)
-{
+void clang_delay_perform_selector(id target, SEL sel, double ti) {
 	clang_delay_perform_selector_v2(target, sel, nil, ti);
 }
 
-void clang_delay_perform_selector_v2(id target, SEL sel, id obj, double ti)
-{
+void clang_delay_perform_selector_v2(id target, SEL sel, id obj, double ti) {
 	[target performSelector:sel withObject:obj afterDelay:ti];
 }
 
-UIImage *clang_load_image(NSString *imgName)
-{
+UIImage *clang_load_image(NSString *imgName) {
 	return [UIImage imageNamed:imgName];
 }
 
-UIImage *clang_load_image_from_bundle(NSString *imgName, NSString *inDir, NSString *bundleName)
-{
+UIImage *clang_load_image_from_bundle(NSString *imgName, NSString *inDir, NSString *bundleName) {
 	NSString *subpath = imgName;
 	if (bundleName) {
 		NSString *bundleFullName = [bundleName stringByAppendingPathExtension:BUNDLE_EXTENSION];
@@ -89,8 +80,7 @@ UIImage *clang_load_image_from_bundle(NSString *imgName, NSString *inDir, NSStri
 	return [UIImage imageNamed:subpath];
 }
 
-UIImage *clang_image_with_contents_of_file(NSString *imgName, NSString *ext, NSString *inDir, NSString *bundleName)
-{
+UIImage *clang_image_with_contents_of_file(NSString *imgName, NSString *ext, NSString *inDir, NSString *bundleName) {
 	NSString *subpath = imgName;
 	NSString *newExt = ext ? ext : @"png";
 	int scale = (int)[UIScreen mainScreen].scale;
@@ -115,8 +105,7 @@ UIImage *clang_image_with_contents_of_file(NSString *imgName, NSString *ext, NSS
 	return [UIImage imageWithContentsOfFile:subpath];
 }
 
-NSString *clang_path_for_resource_from_bundle(NSString *name, NSString *ext, NSString *inDir, NSString *bundleName)
-{
+NSString *clang_path_for_resource_from_bundle(NSString *name, NSString *ext, NSString *inDir, NSString *bundleName) {
 	NSString *subpath = name;
 	if (bundleName) {
 		NSBundle *bundle = clang_bundle(bundleName);
@@ -131,8 +120,7 @@ NSString *clang_path_for_resource_from_bundle(NSString *name, NSString *ext, NSS
 	return [[NSBundle mainBundle] pathForResource:name ofType:ext];
 }
 
-NSString *clang_localized_string(NSString *key, NSString *tbl, NSString *language, NSString *inDir, NSString *bundleName)
-{
+NSString *clang_localized_string(NSString *key, NSString *tbl, NSString *language, NSString *inDir, NSString *bundleName) {
 	if (bundleName) {
 		NSString *path = nil;
 		NSBundle *bundle = clang_bundle(bundleName);
@@ -147,48 +135,40 @@ NSString *clang_localized_string(NSString *key, NSString *tbl, NSString *languag
 	return NSLocalizedStringFromTable(key, tbl, nil);
 }
 
-id clang_read_object(NSString *key)
-{
+id clang_read_object(NSString *key) {
 	return [[NSUserDefaults standardUserDefaults] objectForKey:key];
 }
 
-void clang_store_object(NSString *key, id value, BOOL synchronized)
-{
+void clang_store_object(NSString *key, id value, BOOL synchronized) {
 	[[NSUserDefaults standardUserDefaults] setObject:value forKey:key];
 	if (synchronized) {
 		[[NSUserDefaults standardUserDefaults] synchronize];
 	}
 }
 
-void clang_remove_object(NSString *key, BOOL synchronized)
-{
+void clang_remove_object(NSString *key, BOOL synchronized) {
 	[[NSUserDefaults standardUserDefaults] removeObjectForKey:key];
 	if (synchronized) {
 		[[NSUserDefaults standardUserDefaults] synchronize];
 	}
 }
 
-void clang_add_observer(id observer, SEL sel, NSString *name, id object)
-{
+void clang_add_observer(id observer, SEL sel, NSString *name, id object) {
 	[[NSNotificationCenter defaultCenter] addObserver:observer selector:sel name:name object:object];
 }
 
-void clang_remove_observer(id observer)
-{
+void clang_remove_observer(id observer) {
 	[[NSNotificationCenter defaultCenter] removeObserver:observer];
 }
 
-void clang_remove_observer_v2(id observer, NSString *name, id object)
-{
+void clang_remove_observer_v2(id observer, NSString *name, id object) {
 	[[NSNotificationCenter defaultCenter] removeObserver:observer name:name object:object];
 }
 
-void clang_post_notification_name(NSString *name, id object)
-{
+void clang_post_notification_name(NSString *name, id object) {
 	[[NSNotificationCenter defaultCenter] postNotificationName:name object:object];
 }
 
-void clang_post_notification_name_v2(NSString *name, id object, NSDictionary *userInfo)
-{
+void clang_post_notification_name_v2(NSString *name, id object, NSDictionary *userInfo) {
 	[[NSNotificationCenter defaultCenter] postNotificationName:name object:object userInfo:userInfo];
 }

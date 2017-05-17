@@ -1,8 +1,8 @@
 //
 //  clang_api.h
 //
-//  Created by Daford on 15/8/14.
-//  Copyright (c) 2015 Daford.
+//  Created by Eastze on 15/8/14.
+//  Copyright (c) 2015 Eastze.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
