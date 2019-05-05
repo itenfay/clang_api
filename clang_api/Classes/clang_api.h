@@ -1,8 +1,8 @@
 //
 //  clang_api.h
 //
-//  Created by Eastze on 15/8/14.
-//  Copyright (c) 2015 Eastze.
+//  Created by dyf on 15/8/14.
+//  Copyright (c) 2015 dyf.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
