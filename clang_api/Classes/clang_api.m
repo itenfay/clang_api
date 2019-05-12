@@ -28,9 +28,9 @@
 void clang_perform_selector_v2(id target, SEL sel, id obj);
 void clang_delay_perform_selector_v2(id target, SEL sel, id obj, double ti);
 
-#define CLANG_EMPTY_STR @""
+#define CLANG_EMPTY_STR  @""
 #define BUNDLE_EXTENSION @"bundle"
-#define LANGKIT_TYPE @"lproj"
+#define LANGKIT_TYPE     @"lproj"
 
 NSBundle *clang_bundle(NSString *bundleName) {
 	NSString *path = [[NSBundle mainBundle] pathForResource:bundleName ofType:BUNDLE_EXTENSION];

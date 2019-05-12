@@ -103,7 +103,7 @@ UIKIT_EXTERN UIImage *clang_load_image(NSString *imgName);
 UIKIT_EXTERN UIImage *clang_load_image_from_bundle(NSString *imgName, NSString *inDir, NSString *bundleName);
 
 /**
- *  返回图片且数据不缓存, 如果找不到相应倍数(1x, 2x, 3x)的图片, 那么返回1x图片
+ *  返回图片且数据不缓存内存, 如果找不到相应倍数(1x, 2x, 3x)的图片, 那么返回nil
  *
  *  @param imgName    图片名称
  *  @param ext        图片扩展名, 如果ext为nil, 那么ext默认为png
