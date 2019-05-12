@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "clang_api"
-  s.version      = "1.0.7"
+  s.version      = "1.0.8"
   s.summary      = "存取bundle中的资源，读取本地化文本，执行选择器和UserDefaults的相关操作，调用通知中心的相关操作等。"
   s.homepage     = "https://github.com/dgynfi/clang_api"
   s.license      = { :type => "MIT", :file => "LICENSE" }
