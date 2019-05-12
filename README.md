@@ -1,6 +1,12 @@
 # clang_api
   存取bundle中的资源，读取本地化文本，执行选择器和UserDefaults的相关操作，调用通知中心的相关操作等。
 
+# 安装
+ 支持通过 CocoaPods 安装。
+```pod
+ pod 'clang_api', '~> 1.0.8'
+```
+
 # 使用说明
  1.获取bundle资源文件路径
 ```ObjC
