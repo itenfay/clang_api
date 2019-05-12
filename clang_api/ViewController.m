@@ -37,6 +37,47 @@
 	
 	UIImage *image3 = clang_image_with_contents_of_file(@"angle-mask", nil, nil, nil);
 	NSLog(@"Image3: %@", image3);
+    
+    BOOL y1 = clang_equal(@1, @3);
+    NSLog(@"y1: %d", y1);
+    BOOL y2 = clang_equal_to_string(@"try", @"try");
+    NSLog(@"y2: %d", y2);
+
+    clang_perform_selector(self, @selector(run));
+    clang_perform_selector_v2(self, @selector(runWithArg:), @10);
+    clang_delay_perform_selector(self, @selector(update), 1.0);
+    clang_delay_perform_selector_v2(self, @selector(updateWithArg:), @"update", 1.0);
+    
+    clang_store_object(@"AppID", @"g7482293", YES);
+    NSString *appID = clang_read_object(@"AppID");
+    NSLog(@"appID: %@", appID);
+//    clang_remove_object(@"AppID", YES);
+    
+    clang_add_observer(self, @selector(logInWithResult:), @"DYFLoginNotification", nil);
+//    clang_remove_observer_v2(self, @"DYFLoginNotification", nil);
+//    clang_remove_observer(self);
+    clang_post_notification_name(@"DYFLoginNotification", @1);
+    clang_post_notification_name_v2(@"DYFLoginNotification", nil, @{@"ret": @0});
+}
+
+- (void)run {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)runWithArg:(NSNumber *)arg {
+    NSLog(@"%s, %d", __FUNCTION__, arg.intValue);
+}
+
+- (void)update {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)updateWithArg:(NSString *)arg {
+    NSLog(@"%s, arg: %@", __FUNCTION__, arg);
+}
+
+- (void)logInWithResult:(NSNotification *)noti {
+    NSLog(@"%s, %@", __FUNCTION__, noti.object ?: noti.userInfo);
 }
 
 - (void)didReceiveMemoryWarning {
