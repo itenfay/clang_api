@@ -68,3 +68,7 @@ clang_add_observer(self, @selector(logInWithResult:), @"DYFLoginNotification", n
 clang_post_notification_name(@"DYFLoginNotification", @1);
 clang_post_notification_name_v2(@"DYFLoginNotification", nil, @{@"ret": @0});
 ```
+
+8.QQ群交流 <br>
+QQ群：155353383 <br>
+![qq群：155353383](https://github.com/dgynfi/clang_api/raw/master/clang_api/Image/qq155353383.jpg)
