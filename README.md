@@ -1,13 +1,21 @@
+# 技术交流群
+
+欢迎加入技术交流群(群号:155353383) ，一起探讨技术问题。<br>
+![群号:155353383](https://github.com/dgynfi/clang_api/raw/master/clang_api/Image/qq155353383.jpg)
+
 # clang_api
+
   存取bundle中的资源，读取本地化文本，执行选择器和UserDefaults的相关操作，调用通知中心的相关操作等。
 
 # 安装
+
  支持通过 CocoaPods 安装。
 ```pod
  pod 'clang_api', '~> 1.0.8'
 ```
 
 # 使用说明
+
  1.获取bundle资源文件路径
 ```ObjC
 NSString *path = clang_path_for_resource_from_bundle(@"Info", @"plist", nil, @"Test");
@@ -68,7 +76,3 @@ clang_add_observer(self, @selector(logInWithResult:), @"DYFLoginNotification", n
 clang_post_notification_name(@"DYFLoginNotification", @1);
 clang_post_notification_name_v2(@"DYFLoginNotification", nil, @{@"ret": @0});
 ```
-
-8.QQ群交流 <br>
-QQ群：155353383 <br>
-![qq群：155353383](https://github.com/dgynfi/clang_api/raw/master/clang_api/Image/qq155353383.jpg)
