@@ -7,7 +7,7 @@
 
 ## 技术交流群(群号:155353383)
 
-欢迎加入技术交流群 ，一起探讨技术问题。<br>
+欢迎加入技术交流群 ，一起探讨技术问题。<br />
 ![](https://github.com/dgynfi/clang_api/raw/master/clang_api/Image/qq155353383.jpg)
 
 ## clang_api
