@@ -1,9 +1,9 @@
-[如果此项目能帮助到你，就请你给一颗星。谢谢！(If this project can help you, please give it a star. Thanks!)](https://github.com/dgynfi/clang_api)
+[如果此项目能帮助到你，就请你给一颗星。谢谢！(If this project can help you, please give it a star. Thanks!)](https://github.com/chenxing640/clang_api)
 
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](LICENSE)&nbsp;
 [![CocoaPods](http://img.shields.io/cocoapods/v/clang_api.svg?style=flat)](http://cocoapods.org/pods/clang_api)&nbsp;
 ![CocoaPods](http://img.shields.io/cocoapods/p/clang_api.svg?style=flat)&nbsp;
-[![Build Status](https://travis-ci.org/dgynfi/clang_api.svg?branch=master)](https://travis-ci.org/dgynfi/clang_api)
+[![Build Status](https://travis-ci.org/chenxing640/clang_api.svg?branch=master)](https://travis-ci.org/chenxing640/clang_api)
 
 ## clang_api
 
@@ -12,7 +12,7 @@
 ## Group (ID:614799921)
 
 <div align=left>
-&emsp; <img src="https://github.com/dgynfi/clang_api/raw/master/clang_api/Image/g614799921.jpg" width="30%" />
+&emsp; <img src="https://github.com/chenxing640/clang_api/raw/master/clang_api/Image/g614799921.jpg" width="30%" />
 </div>
 
 ## Installation
@@ -95,4 +95,4 @@ clang_post_notification_name_v2(@"DYFLoginNotification", nil, @{@"ret": @0});
 
 ## Code Sample
 
-- [Code Sample Portal](https://github.com/dgynfi/clang_api/blob/master/clang_api/ViewController.m)
+- [Code Sample Portal](https://github.com/chenxing640/clang_api/blob/master/clang_api/ViewController.m)
