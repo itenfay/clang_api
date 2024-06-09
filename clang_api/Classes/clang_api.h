@@ -1,8 +1,8 @@
 //
 //  clang_api.h
 //
-//  Created by dyf on 15/8/14.
-//  Copyright (c) 2015 dyf.
+//  Created by Tenfay on 15/8/14.
+//  Copyright (c) Tenfay.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -50,7 +50,7 @@ FOUNDATION_EXPORT BOOL clang_equal_to_string(NSString *str1, NSString *str2);
  *  选择器运行相应的方法
  *
  *  @param target 目标对象
- *  @param sel    SEL对象
+ *  @param sel        SEL对象
  */
 FOUNDATION_EXPORT void clang_perform_selector(id target, SEL sel);
 
@@ -58,8 +58,8 @@ FOUNDATION_EXPORT void clang_perform_selector(id target, SEL sel);
  *  选择器运行相应的方法
  *
  *  @param target 目标对象
- *  @param sel    SEL对象
- *  @param obj    参数对象
+ *  @param sel        SEL对象
+ *  @param obj        参数对象
  */
 FOUNDATION_EXPORT void clang_perform_selector_v2(id target, SEL sel, id obj);
 
@@ -67,8 +67,8 @@ FOUNDATION_EXPORT void clang_perform_selector_v2(id target, SEL sel, id obj);
  *  选择器延时运行相应的方法
  *
  *  @param target 目标对象
- *  @param sel    SEL对象
- *  @param ti     延时时间
+ *  @param sel        SEL对象
+ *  @param ti          延时时间
  */
 FOUNDATION_EXPORT void clang_delay_perform_selector(id target, SEL sel, double ti);
 
@@ -76,9 +76,9 @@ FOUNDATION_EXPORT void clang_delay_perform_selector(id target, SEL sel, double t
  *  选择器延时运行相应的方法
  *
  *  @param target 目标对象
- *  @param sel    SEL对象
- *  @param obj    参数对象
- *  @param ti     延时时间
+ *  @param sel        SEL对象
+ *  @param obj        参数对象
+ *  @param ti          延时时间
  */
 FOUNDATION_EXPORT void clang_delay_perform_selector_v2(id target, SEL sel, id obj, double ti);
 
@@ -95,7 +95,7 @@ UIKIT_EXTERN UIImage *clang_load_image(NSString *imgName);
  *  返回图片
  *
  *  @param imgName    图片名称
- *  @param inDir      图片所在目录
+ *  @param inDir        图片所在目录
  *  @param bundleName 不带扩展名的bundle名称, 如果bundleName为nil, 那么返回Main Bundle中的图片
  *
  *  @return An `UIImage` object
@@ -105,9 +105,9 @@ UIKIT_EXTERN UIImage *clang_load_image_from_bundle(NSString *imgName, NSString *
 /**
  *  返回图片且数据不缓存内存, 如果找不到相应倍数(1x, 2x, 3x)的图片, 那么返回nil
  *
- *  @param imgName    图片名称
- *  @param ext        图片扩展名, 如果ext为nil, 那么ext默认为png
- *  @param inDir      图片所在目录
+ *  @param imgName  图片名称
+ *  @param ext           图片扩展名, 如果ext为nil, 那么ext默认为png
+ *  @param inDir       图片所在目录
  *  @param bundleName 不带扩展名的bundle名称, 如果bundleName为nil, 那么返回Main Bundle中的图片
  *
  *  @return An `UIImage` object
@@ -118,8 +118,8 @@ UIKIT_EXTERN UIImage *clang_image_with_contents_of_file(NSString *imgName, NSStr
  *  获取资源文件路径
  *
  *  @param name       文件名称
- *  @param ext        文件扩展名
- *  @param inDir      文件所在目录
+ *  @param ext         文件扩展名
+ *  @param inDir     文件所在目录
  *  @param bundleName 不带扩展名的bundle名称
  *
  *  @return An `NSString` object
@@ -129,10 +129,10 @@ FOUNDATION_EXPORT NSString *clang_path_for_resource_from_bundle(NSString *name, 
 /**
  *  读取本地化字符串
  *
- *  @param key        字段
- *  @param tbl        strings文件名称, 如果文件名为Localizable.strings, 那么tbl为nil
+ *  @param key              字段
+ *  @param tbl              strings文件名称, 如果文件名为Localizable.strings, 那么tbl为nil
  *  @param language   系统使用的语言
- *  @param inDir      文件所在目录
+ *  @param inDir          文件所在目录
  *  @param bundleName 不带扩展名的bundle名称, 如果bundleName为nil, 那么从Main Bundle中读取内容
  *
  *  @return An `NSString` object
@@ -152,7 +152,7 @@ FOUNDATION_EXPORT id clang_read_object(NSString *key);
  *  存储对象(UserDefaults)
  *
  *  @param key          字段
- *  @param value        对象
+ *  @param value      对象
  *  @param synchronized 是否同步
  */
 FOUNDATION_EXPORT void clang_store_object(NSString *key, id value, BOOL synchronized);
@@ -169,41 +169,41 @@ FOUNDATION_EXPORT void clang_remove_object(NSString *key, BOOL synchronized);
  *  添加通知观察者
  *
  *  @param observer 观察者
- *  @param sel      SEL对象
- *  @param name     通知名称
- *  @param object   参数对象
+ *  @param sel            SEL对象
+ *  @param name          通知名称
+ *  @param object      参数对象
  */
 FOUNDATION_EXPORT void clang_add_observer(id observer, SEL sel, NSString *name, id object);
 
 /**
  *  移除通知观察者
  *
- *  @param observer 观察者
+ *  @param observer  观察者
  */
 FOUNDATION_EXPORT void clang_remove_observer(id observer);
 
 /**
  *  移除通知观察者
  *
- *  @param observer 观察者
- *  @param name     通知名称
- *  @param object   参数对象
+ *  @param observer  观察者
+ *  @param name           通知名称
+ *  @param object       参数对象
  */
 FOUNDATION_EXPORT void clang_remove_observer_v2(id observer, NSString *name, id object);
 
 /**
  *  发送通知
  *
- *  @param name   通知名称
- *  @param object 参数对象
+ *  @param name      通知名称
+ *  @param object  参数对象
  */
 FOUNDATION_EXPORT void clang_post_notification_name(NSString *name, id object);
 
 /**
  *  发送通知
  *
- *  @param name     通知名称
- *  @param object   参数对象
- *  @param userInfo 参数字典
+ *  @param name           通知名称
+ *  @param object       参数对象
+ *  @param userInfo   参数字典
  */
 FOUNDATION_EXPORT void clang_post_notification_name_v2(NSString *name, id object, NSDictionary *userInfo);

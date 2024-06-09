@@ -2,8 +2,8 @@
 //  ViewController.m
 //  clang_api
 //
-//  Created by dyf on 15/8/14.
-//  Copyright (c) 2015年 dyf. All rights reserved.
+//  Created by Tenfay on 15/8/14.
+//  Copyright (c) 2015年 Tenfay. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     NSString *path = clang_path_for_resource_from_bundle(@"Info", @"plist", nil, @"Test");
     NSLog(@"Info.plist's path: %@", path);
@@ -51,13 +50,13 @@
     clang_store_object(@"AppID", @"g7482293", YES);
     NSString *appID = clang_read_object(@"AppID");
     NSLog(@"appID: %@", appID);
-    // clang_remove_object(@"AppID", YES);
+    //clang_remove_object(@"AppID", YES);
     
-    clang_add_observer(self, @selector(logInWithResult:), @"DYFLoginNotification", nil);
-    // clang_remove_observer_v2(self, @"DYFLoginNotification", nil);
-    // clang_remove_observer(self);
-    clang_post_notification_name(@"DYFLoginNotification", @1);
-    clang_post_notification_name_v2(@"DYFLoginNotification", nil, @{@"ret": @0});
+    clang_add_observer(self, @selector(logInWithResult:), @"kLoginNotification", nil);
+    //clang_remove_observer_v2(self, @"kLoginNotification", nil);
+    //clang_remove_observer(self);
+    clang_post_notification_name(@"kLoginNotification", @1);
+    clang_post_notification_name_v2(@"kLoginNotification", nil, @{@"ret": @0});
 }
 
 - (void)run {
@@ -82,7 +81,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
