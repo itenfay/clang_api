@@ -7,7 +7,6 @@
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](LICENSE)&nbsp;
 [![CocoaPods](http://img.shields.io/cocoapods/v/clang_api.svg?style=flat)](http://cocoapods.org/pods/clang_api)&nbsp;
 ![CocoaPods](http://img.shields.io/cocoapods/p/clang_api.svg?style=flat)&nbsp;
-[![Build Status](https://travis-ci.org/itenfay/clang_api.svg?branch=master)](https://travis-ci.org/itenfay/clang_api)
 
 ## Group (ID:614799921)
 
@@ -19,8 +18,14 @@
 
 Using [CocoaPods](https://cocoapods.org):
 
-```pod install
- pod 'clang_api', '~> 1.1.0'
+```
+ pod 'clang_api'
+```
+
+Or
+
+```
+ pod 'clang_api', '~> 1.1.2'
 ```
 
 ## Usage
@@ -93,6 +98,6 @@ clang_post_notification_name(@"kLoginNotification", @1);
 clang_post_notification_name_v2(@"kLoginNotification", nil, @{@"ret": @0});
 ```
 
-## Code Sample
+## Sample
 
 - [Code Sample Portal](https://github.com/itenfay/clang_api/blob/master/clang_api/ViewController.m)
