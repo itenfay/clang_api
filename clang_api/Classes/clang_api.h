@@ -2,7 +2,7 @@
 //  clang_api.h
 //
 //  Created by Tenfay on 15/8/14.
-//  Copyright (c) Tenfay.
+//  Copyright (c) 2015 Tenfay.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal

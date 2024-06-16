@@ -25,7 +25,7 @@ Using [CocoaPods](https://cocoapods.org):
 Or
 
 ```
- pod 'clang_api', '~> 1.1.2'
+ pod 'clang_api', '~> 1.1.3'
 ```
 
 ## Usage
